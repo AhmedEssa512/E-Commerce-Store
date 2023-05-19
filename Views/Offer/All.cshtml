@@ -1,0 +1,21 @@
+@model IEnumerable<Offer>
+
+@{
+    foreach (var item in Model)
+    {
+        <h3>Id: @item.Id</h3>
+        <h3>Name: @item.Name</h3>
+        <h3>Description: @item.Description</h3>
+        <h3>Percent: @item.Offer_percent %</h3>
+        <h3>Active: @item.Active</h3>
+        <h3>Created at: @item.Created_at</h3>
+
+
+
+        <a class="btn btn-outline-dark mt-auto" asp-action="Delete" asp-controller="Offer" asp-route-id="@item.Id">Delete</a>
+        <a class="btn btn-outline-dark mt-auto" asp-action="Edit" asp-controller="Offer" asp-route-id="@item.Id">Edit</a>
+
+        <br><hr>
+
+    }
+}

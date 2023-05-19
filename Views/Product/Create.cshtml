@@ -1,0 +1,75 @@
+@model ProductDto
+
+@{
+    ViewData["Title"] = "AddProduct";
+
+}
+<br>
+<div class="text-center">
+
+    
+<form   asp-action="Create" asp-controller="Product" method="post" enctype="multipart/form-data">
+
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+             <div class="form-floating">
+                <input asp-for="Name" class="form-control"  aria-required="true"  />
+                <label asp-for="Name"></label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <br>
+
+
+            <div class="form-floating">
+                <input asp-for="Description" class="form-control"  aria-required="true" />
+                <label asp-for="Description"></label>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <br>
+
+
+            <div class="form-floating">
+                <input asp-for="Price" class="form-control"  aria-required="true" />
+                <label asp-for="Price"></label>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <br>
+
+
+            <div class="form-floating">
+                <input type="file" asp-for="Photo" class="form-control"  aria-required="true" />
+                <label asp-for="Photo"></label>
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <br>
+
+            <div class="form-floating">
+                <input  asp-for="CategoryId" class="form-control"  aria-required="true" />
+                <label asp-for="CategoryId"></label>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <br>
+
+            <div class="form-floating">
+                <input  asp-for="OfferId" class="form-control"  aria-required="true" />
+                <label asp-for="OfferId"></label>
+                <span asp-validation-for="OfferId" class="text-danger"></span>
+            </div>
+            <br>
+
+             <div class="form-floating">
+                <input  asp-for="StockId" class="form-control"  aria-required="true" />
+                <label asp-for="StockId"></label>
+                <span asp-validation-for="StockId" class="text-danger"></span>
+            </div>
+            <br>
+
+                     
+
+            <button type="submit" class="btn btn-primary d-block mt-4">Add</button>
+        </form>
+
+   </div>
+   
+

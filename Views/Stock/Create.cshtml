@@ -1,0 +1,13 @@
+@model StockDto
+
+<form class="form-inline" asp-controller="Stock" asp-action="Create" method="post" enctype="multipart/form-data">
+  <div class="form-group mb-2">
+    <input type="text" asp-for="Quantity"  placeholder="Quanity">
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-2">Add Stock</button>
+</form>
+
+
+
+

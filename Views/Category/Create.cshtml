@@ -1,0 +1,13 @@
+@model CategoryDto
+
+<form class="form-inline" asp-controller="Category" asp-action="Create" method="post" enctype="multipart/form-data">
+  <div class="form-group mb-2">
+    <input type="text" asp-for="name"  placeholder="Category Name">
+  </div>
+
+  <div class="form-group mb-2">
+    <input type="text" asp-for="Description"  placeholder="Category Description">
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-2">Create Category</button>
+</form>
